@@ -1,0 +1,1 @@
+export { fetchStockData } from "./stock";
