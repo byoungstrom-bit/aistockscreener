@@ -24,12 +24,12 @@ export function RiskResults({
   onCopySummary,
 }: RiskResultsProps) {
   return (
-    <div style={{ marginTop: 24, padding: 16, border: "1px solid #ccc" }}>
+      <div style={{ marginTop: 24, padding: 16, border: "1px solid #dbeafe", borderRadius: 6, background: "#fff" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
         <h2 style={{ margin: 0, fontSize: 20 }}>
           {stockData.companyName} ({stockData.ticker})
         </h2>
-        <button onClick={onCopySummary} style={{ padding: "6px 12px", fontSize: 14 }}>
+        <button onClick={onCopySummary} style={{ padding: "6px 12px", fontSize: 14, background: "#2563eb", color: "#fff", border: "none", borderRadius: 4, cursor: "pointer" }}>
           Copy Summary
         </button>
       </div>
@@ -38,7 +38,7 @@ export function RiskResults({
         <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
           <div>
             <div style={{ fontSize: 12, color: "#666" }}>Risk Score</div>
-            <div style={{ fontSize: 24, fontWeight: "bold" }}>{riskScore.score.toFixed(1)}/10</div>
+            <div style={{ fontSize: 24, fontWeight: "bold", color: "#2563eb" }}>{riskScore.score.toFixed(1)}/10</div>
           </div>
           <div>
             <div style={{ fontSize: 12, color: "#666" }}>Risk Tier</div>
@@ -52,7 +52,7 @@ export function RiskResults({
       </div>
 
       {positionSizing.caveat && (
-        <div style={{ marginBottom: 16, padding: 12, background: "#f5f5f5", fontSize: 13 }}>
+        <div style={{ marginBottom: 16, padding: 12, background: "#f0f9ff", fontSize: 13, borderRadius: 4 }}>
           {positionSizing.caveat}
         </div>
       )}

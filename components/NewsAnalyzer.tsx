@@ -40,7 +40,7 @@ export function NewsAnalyzer() {
   }
 
   return (
-    <div style={{ marginTop: 24, padding: 16, border: "1px solid #ccc" }}>
+    <div style={{ marginTop: 24, padding: 16, border: "1px solid #dbeafe", borderRadius: 6, background: "#fff" }}>
       <h2 style={{ marginTop: 0, marginBottom: 12, fontSize: 18 }}>News Impact Interpretation</h2>
       <p style={{ fontSize: 12, color: "#666", marginBottom: 12 }}>
         Paste news text to analyze sentiment, materiality, event type, and potential investor reaction. This is for interpretation only, not prediction.
@@ -68,6 +68,10 @@ export function NewsAnalyzer() {
             padding: "8px 20px",
             fontSize: 14,
             cursor: loading || !text.trim() ? "not-allowed" : "pointer",
+            background: loading || !text.trim() ? undefined : "#2563eb",
+            color: loading || !text.trim() ? undefined : "#fff",
+            border: "none",
+            borderRadius: 4,
           }}
         >
           {loading ? "Analyzing..." : "Analyze Impact"}
@@ -88,7 +92,7 @@ export function NewsAnalyzer() {
       )}
 
       {result && (
-        <div style={{ marginTop: 16, padding: 12, background: "#f5f5f5" }}>
+        <div style={{ marginTop: 16, padding: 12, background: "#f0f9ff", borderRadius: 4 }}>
           <h3 style={{ marginTop: 0, marginBottom: 12, fontSize: 16 }}>Interpretation</h3>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 12 }}>
             <div>

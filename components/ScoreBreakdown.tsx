@@ -44,7 +44,7 @@ export function ScoreBreakdown({ breakdown, totalScore }: ScoreBreakdownProps) {
       </p>
       <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
         <thead>
-          <tr style={{ borderBottom: "1px solid #ccc" }}>
+          <tr style={{ borderBottom: "1px solid #93c5fd" }}>
             <th style={{ textAlign: "left", padding: 8 }}>Factor</th>
             <th style={{ textAlign: "left", padding: 8 }}>Value</th>
             <th style={{ textAlign: "left", padding: 8 }}>Score</th>

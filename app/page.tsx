@@ -89,7 +89,7 @@ export default function Home() {
 
   return (
     <main style={{ maxWidth: 800, margin: "0 auto" }}>
-      <h1 style={{ marginBottom: 8 }}>RiskSizer</h1>
+      <h1 style={{ marginBottom: 8, color: "#2563eb", fontWeight: 600 }}>RiskSizer</h1>
       <p style={{ marginBottom: 24, color: "#666", fontSize: 14 }}>
         Stock risk estimation and portfolio position sizing tool
       </p>
@@ -105,8 +105,8 @@ export default function Home() {
       />
 
       {loading && (
-        <div style={{ marginTop: 24, padding: 24, textAlign: "center", border: "1px solid #ddd" }}>
-          <div style={{ marginBottom: 8 }}>Analyzing {ticker.trim()}...</div>
+        <div style={{ marginTop: 24, padding: 24, textAlign: "center", border: "1px solid #dbeafe" }}>
+          <div style={{ marginBottom: 8, color: "#2563eb" }}>Analyzing {ticker.trim()}...</div>
           <div style={{ fontSize: 13, color: "#666" }}>Fetching data and calculating risk score</div>
         </div>
       )}
@@ -130,7 +130,7 @@ export default function Home() {
           style={{
             marginTop: 24,
             padding: 32,
-            border: "1px dashed #ccc",
+            border: "1px dashed #93c5fd",
             textAlign: "center",
             color: "#666",
           }}
@@ -158,8 +158,8 @@ export default function Home() {
           padding: 12,
           fontSize: 12,
           color: "#666",
-          border: "1px solid #ddd",
-          background: "#f9f9f9",
+          border: "1px solid #dbeafe",
+          background: "#f8fafc",
         }}
       >
         This tool is for educational and decision-support purposes only and does not constitute

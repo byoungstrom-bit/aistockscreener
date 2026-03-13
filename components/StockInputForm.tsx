@@ -40,6 +40,8 @@ export function StockInputForm({
               fontSize: 16,
               minWidth: 120,
               textTransform: "uppercase",
+              border: "1px solid #dbeafe",
+              borderRadius: 4,
             }}
           />
         </div>
@@ -52,7 +54,7 @@ export function StockInputForm({
             value={riskProfile}
             onChange={(e) => onRiskProfileChange(e.target.value as RiskProfile)}
             disabled={loading}
-            style={{ padding: "8px 12px", fontSize: 16, minWidth: 140 }}
+            style={{ padding: "8px 12px", fontSize: 16, minWidth: 140, border: "1px solid #dbeafe", borderRadius: 4 }}
           >
             <option value="Conservative">Conservative</option>
             <option value="Moderate">Moderate</option>
@@ -67,6 +69,10 @@ export function StockInputForm({
               padding: "8px 20px",
               fontSize: 16,
               cursor: loading || !ticker.trim() ? "not-allowed" : "pointer",
+              background: loading || !ticker.trim() ? undefined : "#2563eb",
+              color: loading || !ticker.trim() ? undefined : "#fff",
+              border: "none",
+              borderRadius: 4,
             }}
           >
             {loading ? "Analyzing..." : "Analyze"}
